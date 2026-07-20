@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TechnicalDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="admin_table">
+    <Key>
+      <PropertyRef Name="admin_id" />
+    </Key>
+    <Property Name="admin_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="admin_login" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="admin_password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tech_table">
+    <Key>
+      <PropertyRef Name="tech_id" />
+    </Key>
+    <Property Name="tech_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tech_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tech_photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="tech_price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tech_type_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tech_type_table">
+    <Key>
+      <PropertyRef Name="tech_type_id" />
+    </Key>
+    <Property Name="tech_type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tech_type_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="TechnicalDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="admin_table" EntityType="Self.admin_table" />
+    <EntitySet Name="tech_table" EntityType="Self.tech_table" />
+    <EntitySet Name="tech_type_table" EntityType="Self.tech_type_table" />
+  </EntityContainer>
+</Schema>

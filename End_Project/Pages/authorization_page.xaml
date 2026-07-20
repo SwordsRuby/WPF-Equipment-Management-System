@@ -1,0 +1,38 @@
+﻿<Page x:Class="End_Project.Pages.authorization_page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:End_Project.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="1600"
+      Title="authorization_page">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/back.png"/>
+        </Grid.Background>
+
+        <Border  Width="220" Height="180" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="20"
+   BorderBrush="LightGray"
+   Background="White"
+   BorderThickness="2">
+            <StackPanel Width="150" Height="140" Background="White" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
+                <Border Margin="0 10 0 10" Height="25" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="5"  BorderBrush="LightGray"
+   Background="White"
+   BorderThickness="1">
+                    <TextBox BorderBrush="{x:Null}"  TextAlignment="Center" VerticalContentAlignment="Center" x:Name="login_text" MaxLength="4" PreviewTextInput="login_text_PreviewTextInput"  />
+                </Border>
+                <Border x:Name="password_border" Margin="0 10 0 10" Height="25" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="5"  BorderBrush="LightGray"
+   Background="White"
+   BorderThickness="1">
+                    <TextBox BorderBrush="{x:Null}" TextAlignment="Center" VerticalContentAlignment="Center" x:Name="password_text" MaxLength="4" PreviewTextInput="password_text_PreviewTextInput"  />
+                </Border>
+                <StackPanel Margin="0 10 0 0" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button IsDefault="True" Content="Enter" x:Name="button_enter" Width="60" Background="Black" Style="{StaticResource  button_style}" Foreground="White" Margin="0,0,10,0" Click="button_enter_Click"/>
+                    <Button Content="Exit" x:Name="button_exit" Width="60" Background="Black" Style="{StaticResource  button_style}" Foreground="White" Click="button_exit_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

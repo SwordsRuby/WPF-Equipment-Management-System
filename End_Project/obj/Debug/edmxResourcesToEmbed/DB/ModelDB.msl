@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище TechnicalDBModelContainer" CdmEntityContainer="TechnicalDBEntities">
+    <EntitySetMapping Name="admin_table">
+      <EntityTypeMapping TypeName="TechnicalDBModel.admin_table">
+        <MappingFragment StoreEntitySet="admin_table">
+          <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+          <ScalarProperty Name="admin_login" ColumnName="admin_login" />
+          <ScalarProperty Name="admin_password" ColumnName="admin_password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tech_table">
+      <EntityTypeMapping TypeName="TechnicalDBModel.tech_table">
+        <MappingFragment StoreEntitySet="tech_table">
+          <ScalarProperty Name="tech_id" ColumnName="tech_id" />
+          <ScalarProperty Name="tech_name" ColumnName="tech_name" />
+          <ScalarProperty Name="tech_photo" ColumnName="tech_photo" />
+          <ScalarProperty Name="tech_price" ColumnName="tech_price" />
+          <ScalarProperty Name="tech_type_id" ColumnName="tech_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tech_type_table">
+      <EntityTypeMapping TypeName="TechnicalDBModel.tech_type_table">
+        <MappingFragment StoreEntitySet="tech_type_table">
+          <ScalarProperty Name="tech_type_id" ColumnName="tech_type_id" />
+          <ScalarProperty Name="tech_type_name" ColumnName="tech_type_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
