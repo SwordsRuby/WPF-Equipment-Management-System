@@ -48,7 +48,7 @@ End_Project/
 - README.md
 
 ## Установка и запуск
-1. Клонировать репозиторий: git clone https://github.com/yourusername/End_Project.git
+1. Клонировать репозиторий: git clone https://github.com/SwordsRuby/WPF-Equipment-Management-System.git
 2. Открыть решение в Visual Studio (файл .sln)
 3. Восстановить NuGet-пакеты (Entity Framework, SQL Server)
 4. Настроить базу данных:
@@ -87,9 +87,3 @@ connectionStrings
 - .NET Framework 4.7.2
 - Entity Framework 6.2.0
 - SQL Server LocalDB
-
-## Автор
-[Ваше имя]
-
-## Лицензия
-Проект распространяется под лицензией MIT. Подробности в файле LICENSE (если есть).
